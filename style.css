@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cinza-escuro: #1E1E1E;
+    --laranja: #ebb112;
+    --branco: #ffff;
+    --cinza-claro: #2A2A2A;
+    --cinza-transparente: #2a2a2a9f;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    
+    /* background-color: var(--cinza-escuro) ; */
+    background: url('./assets/barbearia.jpg');
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+    background-color: var(--cinza-transparente);
+}
+
+
+.header-titulo {
+    color: #ebb112
+}
+
+.header-nav {
+    display: flex;
+    gap: 1em;
+}
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+
+i {
+    color: var(--branco);
+}
+
