@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplos de Position CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* para demonstrar o scroll */
+    }
+
+    section {
+      border-bottom: 1px solid #ccc;
+      padding: 40px 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      line-height: 80px;
+      font-weight: bold;
+    }
+
+    /* Static */
+    .static {
+      background-color: #888;
+      position: static;
+    }
+
+    /* Relative */
+    .relative {
+      background-color: #3498db;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    /* Absolute */
+    .relative-container {
+      position: relative;
+      height: 150px;
+      background: #eee;
+    }
+
+    .absolute {
+      background-color: #e67e22;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    /* Fixed */
+    .fixed {
+      background-color: #27ae60;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    /* Sticky */
+    .sticky {
+      background-color: #9b59b6;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>position: static (padrão)</h2>
+    <div class="box static">Static</div>
+  </section>
+
+  <section>
+    <h2>position: relative</h2>
+    <div class="box relative">Relative (top: 20px, left: 20px)</div>
+  </section>
+
+  <section>
+    <h2>position: absolute</h2>
+    <div class="relative-container">
+      <div class="box absolute">Absolute</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>position: sticky</h2>
+    <div class="box sticky">Sticky (gruda no topo ao rolar)</div>
+    <p>Role a página para ver o efeito do sticky funcionando.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia...</p>
+  </section>
+
+  <div class="box fixed">Fixed (canto inferior)</div>
+
+</body>
+</html>

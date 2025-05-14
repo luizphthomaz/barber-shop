@@ -4,51 +4,67 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+
+}
+
 :root {
     --cinza-escuro: #1E1E1E;
     --vermelho: #c91c1c;
     --branco: #ffff;
     --cinza-claro: #2A2A2A;
     --cinza-transparente: #2a2a2a9f;
+
+    --fonte-permanent: "Permanent Marker", cursive;
 }
 
 
-body {
+body::before {
+     content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('./assets/barbearia.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      filter: blur(2px) brightness(0.7); /* Deixa com aspecto de desfocamento */
+      z-index: -1; /* Fica atrás do conteúdo */
+
+}
+
+.container-supremo {
     width: 100%;
     height: 100vh;
-    
-    background: url('./assets/barbearia.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 1em;
-    padding: 1em 0;
+    padding: .5em 4em;
     background-color: var(--cinza-transparente);
 }
 
 
 .header-titulo {
     color: var(--vermelho);
-    font-family: "Permanent Marker", cursive;
+    font-family: var(--fonte-permanent);
     font-size: 2.5em;
 }
 
 .header-nav {
-    width: 40%;
     display: flex;
-    justify-content: space-evenly;
+    gap: 2em;
+    align-items: center;
 }
 
 .header-nav div {
@@ -80,15 +96,62 @@ i:hover {
 
 #inicio {
     background-color: var(--cinza-escuro);
-    margin-top: 200px;
+    margin: 0 10%;
     padding: 2em;
     color: var(--branco);
     display: flex;
-    gap: 1em;
-    font-size: 20px;
+    gap: 2em;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+/* texto e botão agendar */
+#inicio > div {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: center;
 }
 
 #inicio img {
     border-radius: 10px;
 }
 
+#inicio p {
+    text-indent: 50px;
+}
+
+#inicio strong {
+    color: var(--vermelho);
+}
+
+.inicio-btn-agende {
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-size: .6em;
+    
+} 
+
+strong:first-of-type {
+    font-family: "Permanent Marker", cursive;
+}
+
+footer {
+    background-color: var(--cinza-transparente);
+    color: var(--branco);
+    padding: 1em;
+    text-align: center;
+}
+
+footer a {
+    font-size: small;
+    margin-top: 1em;
+}
+
+footer strong {
+    color: var(--vermelho);
+}
