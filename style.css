@@ -14,14 +14,19 @@ li {
 
 :root {
     --cinza-escuro: #1E1E1E;
-    --vermelho: #c91c1c;
+    --vermelho: #d14040ec;
     --branco: #ffff;
     --cinza-claro: #2A2A2A;
-    --cinza-transparente: #2a2a2a9f;
+    --cinza-transparente: #2a2a2abe;
 
     --fonte-permanent: "Permanent Marker", cursive;
 }
 
+/* transição suave ao clicar nos links de navegação */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px; /* ajuste conforme a altura do seu header */
+}
 
 body::before {
     content: "";
@@ -55,6 +60,15 @@ header {
     gap: 1em;
     padding: .5em 4em;
     background-color: var(--cinza-transparente);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header > a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 
@@ -68,6 +82,8 @@ header {
     display: flex;
     gap: 2em;
     align-items: center;
+    font-size: 1.3em;
+    font-weight: 500;
 }
 
 .header-nav div {
@@ -75,12 +91,12 @@ header {
     gap: 1em;
 }
 
-.container-logo {
+/* .container-logo {
     background-color: var(--cinza-claro);
     border: 3px solid var(--cinza-escuro);
     border-radius: 50%;
     padding: 1em;
-}
+} */
 
 a {
     color: var(--branco);
@@ -90,7 +106,6 @@ a {
 a:hover {
     transition: all .4s ease;
     color: var(--vermelho);
-    text-decoration: underline;
 }
 
 
@@ -105,6 +120,7 @@ nav i:hover {
 }
 
 .containers-secao {
+    position: relative;
     background-color: var(--cinza-escuro);
     margin: 1em 10%;
     padding: 2em;
@@ -151,8 +167,7 @@ nav i:hover {
 }
 
 .inicio-btn-agende:hover {
-    /* border: 1px solid var(--branco); */
-    background-color: rgba(209, 64, 64, 0.644);
+    background-color: #d14040a4;
 }
 
 strong:first-of-type {
@@ -171,6 +186,7 @@ strong:first-of-type {
     gap: 3em;
     text-align: center;
     margin-left: 3em;
+    
 }
 
 .servicos-lista-itens {
@@ -179,8 +195,20 @@ strong:first-of-type {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1em;
     width: 90%;
+    transition: all .4s ease;
+}
+
+.servicos-lista-itens:hover {
+    transform: scale(1.1);
+}
+
+.gif {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 footer {
