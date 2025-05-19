@@ -25,7 +25,9 @@ li {
 /* transição suave ao clicar nos links de navegação */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 150px; /* ajuste conforme a altura do seu header */
+
+  /* ajuste conforme a altura do seu header */
+  scroll-padding-top: 100px; 
 }
 
 body::before {
@@ -46,7 +48,7 @@ body::before {
 
 .container-supremo {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -60,8 +62,10 @@ header {
     gap: 1em;
     padding: .5em 4em;
     background-color: var(--cinza-transparente);
+    width: 100%;
     position: sticky;
     top: 0;
+    /* para ficar por cima dos demais conteúdos */
     z-index: 100;
 }
 
@@ -126,6 +130,7 @@ nav i:hover {
     padding: 2em;
     color: var(--branco);
     border-radius: 10px;
+    text-align: center;
 }
 
 #inicio {
@@ -155,7 +160,13 @@ nav i:hover {
     color: var(--vermelho);
 }
 
-.inicio-btn-agende {
+.inicio-container-agendamento {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.inicio-btn-agende, .inicio-fale-conosco {
     padding: 1em;
     border: none;
     border-radius: 10px;
@@ -166,9 +177,20 @@ nav i:hover {
     transition: all .3s ease;
 }
 
+
 .inicio-btn-agende:hover {
     background-color: #d14040a4;
 }
+
+.inicio-fale-conosco {
+    background-color: var(--cinza-claro);
+}
+
+.inicio-fale-conosco:hover {
+    color: greenyellow;
+}
+
+
 
 strong:first-of-type {
     font-family: "Permanent Marker", cursive;
@@ -209,6 +231,12 @@ strong:first-of-type {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+}
+
+/* MAPA */
+iframe {
+    margin-top: 1em;
+    height: 200px;
 }
 
 footer {
