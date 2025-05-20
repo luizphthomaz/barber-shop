@@ -17,7 +17,7 @@
 <body>
     <div class="container-supremo">
         <header>
-            <a href="#inicio">
+            <a href="index.html">
                 <img class="logo" src="assets/android-chrome-192x192.png" alt="">
                 <h1 class="header-titulo">LK's Barber Shop</h1>
             </a>
@@ -26,17 +26,15 @@
                 <div>
                     <a href="#inicio">Início</a>
                     <a href="#servicos">Serviços</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#galeria">Galeria</a>
                     <a href="#sobre">Sobre</a>
                 </div>
 
         
                 <div>
-                    <i class="fa-brands fa-instagram"></i>
                     <a href="https://wa.me/5531992897653" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
-                    <i class="fa-brands fa-facebook"></i>
                 </div>
             </nav>
         </header>
@@ -58,47 +56,94 @@
 
         </section>
 
+        <!-- SERVIÇOS -->
         <main id="servicos" class="containers-secao">
             <h2>Serviços</h2>
 
             <ul class="servicos-lista">
                 <li class="servicos-lista-itens">
                     <h3>Corte de Cabelo</h3>
-                    <img class="gif" src="./assets/gifs/corte-de-cabelo.gif"></img>
+                    <div class="container-gif">
+                        <img class="gif gif-estatico" src="assets/gifs/corte-de-cabelo-estatico.png" alt="">
+                        <img class="gif gif-animado" src="./assets/gifs/corte-de-cabelo.gif"></img>
+
+                    </div>
                     <p>Corte tradicional ou moderno realizado com técnicas precisas e acabamento perfeito.</p>
                     <em>R$ 25,00</em>
                 </li>
 
                 <li class="servicos-lista-itens">
                     <h3>Barba</h3>
-                    <img class="gif" src="./assets/gifs/navalha.gif"></img>
+                    <div class="container-gif">
+                        <img class="gif gif-estatico" src="assets/gifs/navalha-estatica.png" alt="">
+                        <img class="gif gif-animado" src="./assets/gifs/navalha.gif"></img>
+
+                    </div>
                     <p>Modelagem completa com toalha quente, óleo e finalização com produtos premium.</p>
                     <em>R$ 15,00</em>
                 </li>
                 
                 <li class="servicos-lista-itens">
                     <h3>Coloração</h3>
-                    <img class="gif" src="./assets/gifs/coloracao.gif"></img>
+                    <div class="container-gif">
+                        <img class="gif gif-estatico" src="assets/gifs/coloracao-estatica.png" alt="">
+                        <img class="gif gif-animado" src="./assets/gifs/coloracao.gif"></img>
+
+                    </div>
                     <p>Transforme seu visual com técnicas de coloração profissional.</p>
                     <em>R$ 50,00</em>
                 </li>
 
                 <li class="servicos-lista-itens">
                     <h3>Combo Completo</h3>
-                    <img class="gif" src="./assets/gifs/cadeira.gif"></img>
+                    <div class="container-gif">
+                        <img class="gif gif-estatico" src="assets/gifs/cadeira-estatica.png" alt="">
+                        <img class="gif gif-animado" src="./assets/gifs/cadeira.gif"></img>
+
+                    </div>
                     <p>Modelagem completa com toalha quente, óleo e finalização com produtos premium.</p>
                     <em>R$ 70,00</em>
                 </li>
             </ul>
         </main>
 
+        <!-- Galeria de Imagens -->
+        <section id="galeria" class="containers-secao">
+    <h2>Galeria</h2>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="assets/galeria1.jpg" alt="Corte 1">
+            <img src="assets/galeria2.jpg" alt="Corte 2">
+            <img src="assets/galeria3.jpg" alt="Corte 3">
+            <img src="assets/galeria4.jpg" alt="Corte 4">
+            
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="carousel-indicators">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+    </div>
+    </div>
+</section>
+
+        <!-- SOBRE -->
         <section id="sobre" class="containers-secao">
             <div class="section-title">
                 <h2>Nossa Localização</h2>
             </div>
             <div class="map-container">
-                <a href="https://maps.app.goo.gl/kG9MJbZ6HVPWw8127" target="_blank"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.6131377169436!2d-43.986807924140614!3d-19.813993434707925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68f23658ce3af%3A0xa2727e0ec248c905!2sMinas%20%2B%20Bahia!5e0!3m2!1spt-BR!2sbr!4v1747676303527!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.6131377169436!2d-43.986807924140614!3d-19.813993434707925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68f23658ce3af%3A0xa2727e0ec248c905!2sMinas%20%2B%20Bahia!5e0!3m2!1spt-BR!2sbr!4v1747676303527!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <a href="https://maps.app.goo.gl/kG9MJbZ6HVPWw8127" target="_blank"> Av. Bernarda Silvestre, 595B - Rio Branco, Belo Horizonte - MG, 31535-200</a>
             </div>
+        </section>
+
+        <section id="contato">
+            
         </section>
 
         <!-- Rodapé -->
