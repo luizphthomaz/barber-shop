@@ -1,51 +1,60 @@
-const carouselImages = document.querySelector('.carousel-images');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = document.querySelectorAll('.carousel-images img').length;
-let currentIndex = 0;
-let autoplayInterval;
+const carrosselImagens = document.querySelector('.carrossel-images')
 
-document.querySelector('.next').addEventListener('click', () => {
-  goToSlide((currentIndex + 1) % totalSlides);
-});
+// Conta quantas imagens existem no carrossel
+const totalSlides = document.querySelectorAll('.carrossel-images img').length
 
-document.querySelector('.prev').addEventListener('click', () => {
-  goToSlide((currentIndex - 1 + totalSlides) % totalSlides);
-});
+const indicadores = document.querySelectorAll('.indicador')
+const indexAtual = 0;
 
-dots.forEach(dot => {
-  dot.addEventListener('click', () => {
-    const index = parseInt(dot.getAttribute('data-index'));
-    goToSlide(index);
-  });
-});
+let autoplayIntervalo;
 
-function goToSlide(index) {
-  const slideWidth = document.querySelector('.carousel').clientWidth;
-  carouselImages.style.transform = `translateX(-${index * slideWidth}px)`;
-  currentIndex = index;
-  updateDots();
+document.querySelector('.proximo').addEventListener('click', () => {
+  // Avança para o próximo slide (ou volta ao primeiro se estiver no último)
+  apresentacaoSlide((indexAtual + 1) % totalSlides)
+})
+
+// Evento de clique no botão "anterior"
+document.querySelector('.anterior').addEventListener('click', () => {
+  apresentacaoSlide((indexAtual - 1 + totalSlides) % totalSlides)
+})
+
+// Função que muda o slide visível
+
+function apresentacaoSlide(index) {
+  // Descobre a largura do carrossel para calcular o deslocamento
+  const larguraSlide = document.querySelector('.carrossel').clientWidth
+  
+    // Move o container das imagens para a esquerda (-index * largura)
+  carrosselImagens.style.transform = `translateX(-${index * larguraSlide}px)`
+
+  indexAtual = index
+
+  atualizarIndicadores()
+  
 }
 
-function updateDots() {
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentIndex].classList.add('active');
+function atualizarIndicadores() {
+  indicadores.forEach(indicador => indicador.classList.remove('active'))
+
+  indicadores[indexAtual].classList.add('active')
+  
 }
 
-// Autoplay
+  // Troca de slide a cada 4 segundos (4000ms)
 function startAutoplay() {
-  autoplayInterval = setInterval(() => {
-    goToSlide((currentIndex + 1) % totalSlides);
-  }, 4000); // 4 segundos
+  autoplayIntervalo = setInterval(() => {
+    apresentacaoSlide((indexAtual + 1) % totalSlides)
+  }, 4000);
 }
 
-// Pausar autoplay ao interagir
+// Função que pausa o autoplay
 function stopAutoplay() {
-  clearInterval(autoplayInterval);
+  clearInterval(autoplayIntervalo)
 }
 
-document.querySelector('.carousel').addEventListener('mouseenter', stopAutoplay);
-document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay);
+document.querySelector('.carrossel').addEventListener('mouseenter', stopAutoplay)
 
-// Inicializar
-goToSlide(0);
-startAutoplay();
+document.querySelector('.carrossel').addEventListener('mouseleave', startAutoplay)
+
+apresentacaoSlide(0)
+startAutoplay()

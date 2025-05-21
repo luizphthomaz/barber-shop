@@ -18,6 +18,7 @@ li {
     --branco: #ffff;
     --cinza-claro: #2A2A2A;
     --cinza-transparente: #2a2a2abe;
+    --branco-transparente: #ffffff80;
 
     --fonte-permanent: "Permanent Marker", cursive;
 }
@@ -96,12 +97,12 @@ header > a {
     gap: 1em;
 }
 
-/* .container-logo {
+.container-logo {
     background-color: var(--cinza-claro);
     border: 3px solid var(--cinza-escuro);
     border-radius: 50%;
     padding: 1em;
-} */
+}
 
 a {
     color: var(--branco);
@@ -113,7 +114,7 @@ a:hover {
     color: var(--vermelho);
 }
 
-
+/* Botão Whatsapp */
 nav i {
     color: var(--branco);
     transition: all .5s ease;
@@ -251,77 +252,78 @@ strong:first-of-type {
 }
 
 
-/* CARROSEL DE IMAGENS */
-.carousel {
+/* carrossel DE IMAGENS */
+.carrossel {
     position: relative;
     width: 100%;
     max-width: 600px;
     height: 400px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin: 1em auto;
+    overflow: hidden; /* Esconde qualquer parte das imagens que ficar fora da área visível*/
+
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px var(--cinza-escuro);
 }
 
-.carousel-images {
+.carrossel-images {
     display: flex;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; /* Animação suave ao aplicar transform (troca de slide) */
 }
 
-.carousel-images img {
+.carrossel-images img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
+    object-fit: cover; /* Corta ou expande a imagem para cobrir todo o espaço sem distorcer a proporção */
+
+    flex-shrink: 0; /* Impede que a imagem encolha quando há pouco espaço, mantendo a largura fixa */
 }
 
-.carousel button {
+.carrossel button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    color: white;
+    background-color: var(--cinza-transparente);
+    color: var(--branco);
     font-size: 2rem;
     cursor: pointer;
-    padding: 10px;
+    padding: .4em;
     z-index: 2;
     border-radius: 50%;
+    border: none;
 }
 
-.carousel .prev {
+.anterior {
     left: 10px;
 }
 
-.carousel .next {
+.proximo {
     right: 10px;
 }
 
-/* indicadores do carrosel */
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
+/* Container das bolinhas (indicadores) */
+.carrossel-indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s;
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--branco-transparente);
+    cursor: pointer;
+    transition: backgroun-color .3s ease;
 }
 
-.dot.active {
-  background-color: white;
+.indicador.active  {
+    background-color: var(--branco);
 }
-
 
 
 /* MAPA */
