@@ -1,0 +1,251 @@
+
+/* TABLET RESPONSIVO (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    header {
+        padding: 0.5em 2em;
+    }
+
+    .header-titulo {
+        font-size: 2em;
+    }
+
+    .header-nav {
+        font-size: 1.1em;
+        gap: 1.5em;
+    }
+
+    .containers-secao {
+        margin: 1em 5%;
+        padding: 1.5em;
+    }
+
+    #inicio {
+        font-size: 24px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #inicio p {
+        text-indent: 0;
+    }
+
+    .servicos-lista {
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        margin-left: 0;
+    }
+
+    .servicos-lista-itens {
+        width: 100%;
+    }
+
+    .carrossel {
+        max-width: 500px;
+        height: 300px;
+    }
+
+    .sobre-texto {
+        margin: 1em 2em 2em 2em;
+        font-size: 1.2em;
+    }
+}
+
+/* MOBILE RESPONSIVO (até 768px) */
+@media screen and (max-width: 768px) {
+    html {
+        scroll-padding-top: 70px;
+    }
+
+    header {
+        padding: 0.5em 1em;
+        position: relative;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-titulo {
+        font-size: 1.5em;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--cinza-transparente);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 1em;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .header-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header-nav div {
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .header-nav div:first-child {
+        border-bottom: 1px solid var(--cinza-claro);
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+    }
+
+    .header-nav a {
+        padding: 0.5em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .header-nav a:hover {
+        background-color: var(--cinza-claro);
+    }
+
+    .containers-secao {
+        margin: 1em 3%;
+        padding: 1em;
+    }
+
+    #inicio {
+        font-size: 18px;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5em;
+    }
+
+    #inicio p {
+        text-indent: 0;
+        line-height: 1.6;
+    }
+
+    .inicio-container-agendamento {
+        flex-direction: column;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .inicio-btn-agende, .inicio-fale-conosco {
+        width: 100%;
+        font-size: 0.8em;
+        padding: 1.2em;
+        justify-content: center;
+    }
+
+    .servicos-lista {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+        margin-left: 0;
+    }
+
+    .servicos-lista-itens {
+        width: 100%;
+        padding: 1.5em;
+    }
+
+    .servicos-lista-itens:hover {
+        transform: scale(1.02);
+    }
+
+    .gif {
+        width: 80px;
+        height: 80px;
+    }
+
+    .carrossel {
+        max-width: 100%;
+        height: 250px;
+        margin: 1em 0;
+    }
+
+    .carrossel button {
+        font-size: 1.5rem;
+        padding: 0.3em;
+    }
+
+    .sobre-texto {
+        margin: 1em 0 2em 0;
+        font-size: 1em;
+        text-indent: 0;
+        line-height: 1.6;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    footer {
+        padding: 1.5em 1em;
+    }
+
+    footer p {
+        margin-bottom: 0.5em;
+    }
+}
+
+/* MOBILE PEQUENO (até 480px) */
+@media screen and (max-width: 480px) {
+    .header-titulo {
+        font-size: 1.2em;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .containers-secao {
+        margin: 1em 2%;
+        padding: 0.8em;
+    }
+
+    #inicio {
+        font-size: 16px;
+    }
+
+    .carrossel {
+        height: 200px;
+    }
+
+    .carrossel button {
+        font-size: 1.2rem;
+        padding: 0.2em;
+    }
+
+    .gif {
+        width: 60px;
+        height: 60px;
+    }
+
+    .servicos-lista-itens {
+        padding: 1em;
+    }
+
+    .sobre-texto {
+        font-size: 0.9em;
+    }
+
+    iframe {
+        height: 200px;
+    }
+}

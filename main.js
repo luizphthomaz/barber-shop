@@ -4,7 +4,7 @@ const carrosselImagens = document.querySelector('.carrossel-images')
 const totalSlides = document.querySelectorAll('.carrossel-images img').length
 
 const indicadores = document.querySelectorAll('.indicador')
-const indexAtual = 0;
+let indexAtual = 0;
 
 let autoplayIntervalo;
 
@@ -16,6 +16,16 @@ document.querySelector('.proximo').addEventListener('click', () => {
 // Evento de clique no botão "anterior"
 document.querySelector('.anterior').addEventListener('click', () => {
   apresentacaoSlide((indexAtual - 1 + totalSlides) % totalSlides)
+})
+
+// Adiciona evento de clique em cada bolinha (indicador)
+indicadores.forEach( indicador => {
+  indicador.addEventListener('click', () => {
+    // Lê o número do slide que a bolinha representa
+    const index = parseInt(indicador.getAttribute('data-index'))
+    // Vai diretamente para o slide correspondente
+    apresentacaoSlide(index)
+  })
 })
 
 // Função que muda o slide visível
@@ -30,7 +40,6 @@ function apresentacaoSlide(index) {
   indexAtual = index
 
   atualizarIndicadores()
-  
 }
 
 function atualizarIndicadores() {

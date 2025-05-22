@@ -210,8 +210,7 @@ strong:first-of-type {
     grid-template-columns: 1fr 1fr;
     gap: 3em;
     text-align: center;
-    margin-left: 3em;
-    
+    margin-left: 3em;   
 }
 
 .servicos-lista-itens {
@@ -243,7 +242,6 @@ strong:first-of-type {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    
 }
 
 .gif-animado {
@@ -325,6 +323,13 @@ strong:first-of-type {
     background-color: var(--branco);
 }
 
+.sobre-texto {
+    margin: 1em 4em 4em 4em ;
+    font-size: 1.3em;
+    text-indent: 2em;
+    text-align: justify;
+}
+
 
 /* MAPA */
 iframe {
@@ -333,7 +338,7 @@ iframe {
 }
 
 .map-container iframe{
-    margin: 1em 0;
+    margin: 1em 0 2em 0;
 }
 
 
@@ -353,3 +358,4 @@ footer a {
 footer strong {
     color: var(--vermelho);
 }
+
