@@ -104,6 +104,37 @@ header > a {
     padding: 1em;
 }
 
+ .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--branco);
+            transition: 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--cinza-escuro);
+            padding: 1em;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+
 a {
     color: var(--branco);
     text-decoration: none;
@@ -324,10 +355,17 @@ strong:first-of-type {
 }
 
 .sobre-texto {
-    margin: 1em 4em 4em 4em ;
+    margin: 1em 4em 2em 4em ;
     font-size: 1.3em;
     text-indent: 2em;
     text-align: justify;
+}
+
+hr {
+    width: 10%;
+    margin: 4em auto;
+    border: 1px solid var(--vermelho);
+
 }
 
 

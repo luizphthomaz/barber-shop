@@ -36,13 +36,30 @@
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
+
             </nav>
+
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#inicio" onclick="closeMobileMenu()">Início</a>
+                <a href="#servicos" onclick="closeMobileMenu()">Serviços</a>
+                <a href="#galeria" onclick="closeMobileMenu()">Galeria</a>
+                <a href="#sobre" onclick="closeMobileMenu()">Sobre</a>
+                <a href="https://wa.me/5531992897653" target="_blank" onclick="closeMobileMenu()">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
         </header>
 
         <!-- Início -->
         <section id="inicio"  class="containers-secao">
             <div>
-                <p>Aqui na <strong>LK's</strong> oferecemos mais que <strong>cabelo, barba e bigode</strong>. Aqui você encontra e faz amigos enquanto relaxa e recebe um atendimento personalizado com profissionais altamente qualificados.</p>
+                <p class="inicio-texto">Aqui na <strong>LK's</strong> oferecemos mais que <strong>cabelo, barba e bigode</strong>. Aqui você encontra e faz amigos enquanto relaxa e recebe um atendimento personalizado com profissionais altamente qualificados.</p>
 
                 <div class="inicio-container-agendamento">
                     <button class="inicio-btn-agende">Agende seu Horário</button>
@@ -134,7 +151,7 @@
 
             <p class="sobre-texto">Estamos no mercado há mais de 10 anos. Nossa equipe é composta por profissionais altamente qualificados, comprometidos em oferecer um atendimento personalizado, com técnica apurada e atenção às preferências de cada cliente. Na LK's, cultivamos não apenas a estética, mas também o relacionamento.</p>
 
-
+            <hr>
 
             <div class="section-title">
                 <h3>Nossa Localização</h2>
