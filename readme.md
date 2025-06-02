@@ -5,7 +5,7 @@ Este repositório contém o código-fonte do site institucional da **LK's Barber
 
 ## 🔗 Acesse o site
 
-[https://lkbarbershop.com](https://lkbarbershop.com) *(exemplo de link – substitua pelo real caso publicado)*
+[https://luizphthomaz.github.io/barber-shop/)]
 
 ---
 
@@ -16,8 +16,6 @@ Este repositório contém o código-fonte do site institucional da **LK's Barber
 - [🚀 Funcionalidades](#-funcionalidades)
 - [📱 Responsividade](#-responsividade)
 - [🛠️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [📂 Estrutura de Pastas](#-estrutura-de-pastas)
-- [📥 Como Usar Localmente](#-como-usar-localmente)
 - [✍️ Créditos](#️-créditos)
 
 ---
@@ -30,7 +28,7 @@ O objetivo do site é apresentar a barbearia **LK's Barber Shop** de forma atrat
 
 ## 📸 Prévia do Site
 
-![Preview](./assets/preview.jpg)  
+![Preview](./assets/captura-de-tela.png)  
 *Adicione uma imagem ilustrativa do site aqui*
 
 ---
@@ -71,44 +69,6 @@ A responsividade é feita via **media queries** no CSS, garantindo boa visualiza
 - **Google Fonts**: Tipografias personalizadas.
 - **Font Awesome**: Ícones sociais.
 - **Google Maps Embed**: Mapa da localização da barbearia.
-
----
-
-## 📂 Estrutura de Pastas
-
-```plaintext
-📁 assets
- ┣ 📁 gifs                # Gifs animados e estáticos para os serviços
- ┣ 📁 galeria             # Imagens da galeria de cortes
- ┣ 📄 barbearia.jpg       # Imagem de fundo
- ┣ 📄 favicon.ico
- ┗ 📄 logo.png
-
-📄 index.html             # Página principal do site
-📄 style.css              # Estilos principais
-📄 lks-barber-shop-responsivo.css  # Estilos responsivos por media queries
-📄 main.js                # Script JS para carrossel
-```
-
----
-
-## 📥 Como Usar Localmente
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/lks-barber-shop.git
-```
-
-2. Acesse a pasta:
-```bash
-cd lks-barber-shop
-```
-
-3. Abra o arquivo `index.html` no navegador:
-```bash
-start index.html
-# ou apenas clique duas vezes no arquivo
-```
 
 ---
 
