@@ -29,7 +29,7 @@ O objetivo do site é apresentar a barbearia **LK's Barber Shop** de forma atrat
 ## 📸 Prévia do Site
 
 ![Preview](./assets/captura-de-tela.png)  
-*Adicione uma imagem ilustrativa do site aqui*
+
 
 ---
 
@@ -74,7 +74,7 @@ A responsividade é feita via **media queries** no CSS, garantindo boa visualiza
 
 ## ✍️ Créditos
 
-- Desenvolvedor: [Luiz Thomaz](https://github.com/seu-usuario)
+- Desenvolvedor: [Luiz Thomaz](https://github.com/luizphthomaz)
 - Ícones: [Flaticon](https://www.flaticon.com/br/icones-gratis/barbearia)
 - Fontes: [Google Fonts](https://fonts.google.com/)
 - Imagens e gifs: Criados e otimizados para o projeto
