@@ -116,16 +116,21 @@ window.addEventListener('resize', mediaQ)
 mediaQ()
 
 // Smooth scroll com offset para mobile
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      const offsetTop = target.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
-  });
-});
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+//   anchor.addEventListener("click", function (e) {
+//     const target = document.querySelector(this.getAttribute("href"));
+//     if (target) {
+//       // Só previne o padrão e faz scroll manual em telas pequenas
+//       if (window.innerWidth <= 768) {
+//         e.preventDefault();
+//         const offsetTop = target.offsetTop - 80; // ajuste conforme header mobile
+//         window.scrollTo({
+//           top: offsetTop,
+//           behavior: "smooth",
+//         });
+//       }
+//       // Em telas grandes, deixa o CSS cuidar do scroll suave
+//     }
+//   });
+// });
+

@@ -1,7 +1,7 @@
 /* TABLET RESPONSIVO (768px - 1024px) */
 @media screen and (max-width: 1024px) {
     html {
-        scroll-padding-top: 80px;
+        scroll-padding-top: 100px;
     }
 
     header {

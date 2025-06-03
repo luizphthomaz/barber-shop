@@ -12,10 +12,18 @@ li {
     list-style: none;
 }
 
+/* transição suave ao clicar nos links de navegação */
+html {
+  scroll-behavior: smooth;
+
+  /* ajuste conforme a altura do seu header */
+  scroll-padding-top: 100px;
+}
+
 :root {
     --cinza-escuro: #1E1E1E;
     --vermelho: #d14040ec;
-    --branco: #ffff;
+    --branco: #fff;
     --cinza-claro: #2A2A2A;
     --cinza-transparente: #2a2a2abe;
     --branco-transparente: #ffffff80;
@@ -23,13 +31,6 @@ li {
     --fonte-permanent: "Permanent Marker", cursive;
 }
 
-/* transição suave ao clicar nos links de navegação */
-html {
-  scroll-behavior: smooth;
-
-  /* ajuste conforme a altura do seu header */
-  scroll-padding-top: 100px; 
-}
 
 body::before {
     content: "";
